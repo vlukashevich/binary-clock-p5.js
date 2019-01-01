@@ -1,4 +1,4 @@
-//array of numbers that shows how many rows of bit (circles) we have in each column
+//array of numbers that show how many rows of bit (circles) we have in each column
 let rows = [2, 4, 3, 4, 3, 4];
 let grid;
 
