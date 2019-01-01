@@ -1,9 +1,9 @@
-//array of numbers that show how many rows of bit (circles) we have in each column
+//array of numbers that show how many rows of bits (circles) we have in each column
 let rows = [2, 4, 3, 4, 3, 4];
 let grid;
 
 function setup() {
-  //colorMode(HSB, 100, 100, 100, 1); // need for rainbow colors
+  //colorMode(HSB, 100, 100, 100, 1); // for rainbow colors
   createCanvas(600, 600);
   
   //making a "grid" of circles representing each bit of each digit
@@ -33,7 +33,7 @@ function draw() {
     // reverse binary string
     binary = binary.split("").reverse().join("");
     
-    //set value of each   
+    //set the value of each element of the array   
     for (let j = 0; j < rows[i]; j++) {
       if (!binary[j]) {
         grid[i][j] = 0;  
@@ -62,11 +62,13 @@ function draw() {
       } else {
         alpha = 1;
         bright = 100;
-         fill(255, 0, 255);
+        fill(255, 0, 255);
       }
+      
       //x & y coordinates of current circle
       let x = w * (i + 0.5);
       let y = w * (6 - j - 1  + 0.5);
+      
       //fill(hue, 100, bright, alpha);
       
       ellipse(x, y, w - 10, w - 10);
